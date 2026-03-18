@@ -19,7 +19,7 @@ public class FabricaDeConexao {
 
     public Connection con(){
         try {
-            var url = "jdbc:sqlserver://localhost:1434;databaseName=ponto;encrypt=true;trustServerCertificate=true;";
+            var url = "jdbc:sqlserver://localhost:1434;databaseName=PontoPonto;encrypt=true;trustServerCertificate=true;";
             var user = "sa";
             var password = "Batat@124";
             return DriverManager.getConnection(url,user,password);

@@ -37,6 +37,7 @@ public class FuncionarioDao extends BaseDAO{
 
                 System.out.printf("%-5d %-15s %-25s %-20s\n",
                         id, matricula, nome, departamento);
+                System.out.println("\n\n");
             }
 
         } catch (SQLException e) {

@@ -12,6 +12,7 @@ import java.util.List;
 public class RegistroDePontoDAO extends BaseDAO{
     private int idFuncionario;
     private Date data;
+
     public RegistroDePontoDAO(int idFuncionario, Date data){
         this.idFuncionario = idFuncionario;
         this.data = data;
