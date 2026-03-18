@@ -17,11 +17,8 @@ public class UnivillePontoPontoApplication implements CommandLineRunner {
 		FuncionarioDao f = new FuncionarioDao();
 		f.exibirFuncionarios();
 
-        RegistroDePontoDAO rp = new RegistroDePontoDAO(1, java.sql.Date.valueOf("2026-03-10"));
-        System.out.println(rp.buscarRegistrosDePonto());
-
-//		RegistroDePontoDAO rp = new RegistroDePontoDAO(1, java.sql.Date.valueOf("2026-03-17"));
-//		System.out.println(rp.buscarRegistrosDePonto());
+		RegistroDePontoDAO rp = new RegistroDePontoDAO(1, java.sql.Date.valueOf("2026-03-17"));
+		System.out.println(rp.buscarRegistrosDePonto());
 
 
 	}

@@ -19,14 +19,18 @@ public class FabricaDeConexao {
 
     public Connection con(){
         try {
-//            return DriverManager.getConnection("jdbc:mysql://localhost:3306/PontoPonto","root","root");
             var url = "jdbc:sqlserver://localhost:1434;databaseName=ponto;encrypt=true;trustServerCertificate=true;";
             var user = "sa";
             var password = "Batat@124";
             return DriverManager.getConnection(url,user,password);
 
         }catch(SQLException e){
-            throw new RuntimeException(e);
+            try{
+                return DriverManager.getConnection("jdbc:mysql://localhost:3306/PontoPonto","root","root");
+            }catch(SQLException ex){
+                throw new RuntimeException(ex);
+            }
+
 
         }
 
