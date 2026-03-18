@@ -1,5 +1,6 @@
 package com.example.Univille_PontoPonto.Service;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Duration;
@@ -9,8 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegistroDePontoDAO extends BaseDAO{
+    private int idFuncionario;
+    private Date data;
+    public RegistroDePontoDAO(int idFuncionario, Date data){
+        this.idFuncionario = idFuncionario;
+        this.data = data;
 
-    public String buscarRegistrosDePonto(int idFuncionario, LocalDateTime data){
+    }
+
+    public String buscarRegistrosDePonto(){
 
         String query = """
         SELECT
@@ -35,8 +43,8 @@ public class RegistroDePontoDAO extends BaseDAO{
         try(var con = con();
             var pre = con.prepareStatement(query)) {
 
-            pre.setInt(1, idFuncionario);
-            pre.setDate(2, java.sql.Date.valueOf(data.toLocalDate()));
+            pre.setInt(1, this.idFuncionario);
+            pre.setDate(2, this.data);
 
             ResultSet rs = pre.executeQuery();
 

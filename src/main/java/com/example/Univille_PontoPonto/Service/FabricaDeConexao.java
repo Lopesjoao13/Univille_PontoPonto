@@ -19,7 +19,7 @@ public class FabricaDeConexao {
 
     public Connection con(){
         try {
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/ponto","root","root");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/PontoPonto","root","root");
 
         }catch(SQLException e){
             throw new RuntimeException(e);
