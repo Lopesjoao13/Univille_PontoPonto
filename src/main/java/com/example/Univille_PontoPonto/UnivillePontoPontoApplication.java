@@ -1,5 +1,6 @@
 package com.example.Univille_PontoPonto;
 
+import com.example.Univille_PontoPonto.Service.FuncionarioDao;
 import com.example.Univille_PontoPonto.Service.RegistroDePontoDAO;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,8 +14,15 @@ public class UnivillePontoPontoApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(UnivillePontoPontoApplication.class, args);
 
-        RegistroDePontoDAO rp = new RegistroDePontoDAO(1, java.sql.Date.valueOf("2026-03-17"));
+		FuncionarioDao f = new FuncionarioDao();
+		f.exibirFuncionarios();
+
+        RegistroDePontoDAO rp = new RegistroDePontoDAO(1, java.sql.Date.valueOf("2026-03-10"));
         System.out.println(rp.buscarRegistrosDePonto());
+
+//		RegistroDePontoDAO rp = new RegistroDePontoDAO(1, java.sql.Date.valueOf("2026-03-17"));
+//		System.out.println(rp.buscarRegistrosDePonto());
+
 
 	}
 
