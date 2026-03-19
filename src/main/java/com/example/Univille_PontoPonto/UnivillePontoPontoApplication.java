@@ -1,12 +1,10 @@
 package com.example.Univille_PontoPonto;
 
-import com.example.Univille_PontoPonto.Service.FuncionarioDao;
-import com.example.Univille_PontoPonto.Service.RegistroDePontoDAO;
+import com.example.Univille_PontoPonto.ServiceDAO.FuncionarioDao;
+import com.example.Univille_PontoPonto.ServiceDAO.RegistroDePontoDAO;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.time.LocalDate;
 
 @SpringBootApplication
 public class UnivillePontoPontoApplication implements CommandLineRunner {
